@@ -1,0 +1,27 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "Video Library",
+  "main": "index.js",
+  "scripts": {
+    "library": "src/library.js",
+    "import": "src/import.js",
+    "test": "src/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Basingstoke-Anime-Society/library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Basingstoke-Anime-Society/library/issues"
+  },
+  "homepage": "https://github.com/Basingstoke-Anime-Society/library#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "inquirer": "^7.0.4",
+    "lodash": "^4.17.15",
+    "sqlite3": "^4.1.1"
+  }
+}
