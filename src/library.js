@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-import { dbConnect, dbClose } from './db';
+const db = require('./db');
+const cli = require('./cli');
 
-dbConnect();
-
-// ...
-
-dbClose();
+db.dbConnect(() => {
+    cli.CLI();
+});

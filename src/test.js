@@ -3,11 +3,11 @@
 const db = require('./db');
 const cli = require('./cli');
 
-db.dbConnect((err) => {
+db.dbConnect(() => {
     // TEST 1: get any video
     (() => {
         console.log("TEST 1");
-        let videos = db.queryVideos({});
+        let videos = query.queryVideos({});
 
         videos.forEach(video => {
             cli.showVideo(video);

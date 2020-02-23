@@ -7,7 +7,6 @@ function dbConnect (callback = null) {
         if (err) {
             console.error(err.message);
         } else {
-            console.log("Database connected\n");
             if (callback !== null) {
                 callback();
             }
@@ -16,19 +15,21 @@ function dbConnect (callback = null) {
 }
 
 function dbClose (callback = null) {
-    console.log("Closing database");
-    db.close(callback);
+    db.close((err) => {
+        if (err) {
+            console.error(err.message);
+        }
+        if (callback !== null) {
+            callback();
+        }
+    });
+    
 }
 
-function queryVideos(query = {}) {
-    return [{
-        name: "Test",
-        filename: "Test/Test.mp4",
-        shown: []
-    }];
-}
+function allVideos() {
 
+}
 
 module.exports = {
-    dbConnect, dbClose, queryVideos
+    dbConnect, dbClose, allVideos
 }
