@@ -3,7 +3,9 @@ const sqlite3 = require('sqlite3').verbose();
 let db = null;
 
 function dbConnect (callback = null) {
-    db = new sqlite3.Database('./data/library.db', (err) => {
+    let filename = __dirname+'/../../data/library.db';
+    console.log(filename);
+    db = new sqlite3.Database(filename, (err) => {
         if (err) {
             console.error(err.message);
         } else {

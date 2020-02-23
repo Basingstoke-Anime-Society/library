@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const db = require('./db');
-const cli = require('./cli');
+const db = require('./lib/db');
+const cli = require('./lib/cli');
 
 db.dbConnect(() => {
     // TEST 1: get any video

@@ -26,16 +26,16 @@ function showVideo(video) {
         return;
     }
 
-    console.log("Name:     ".grey+video.name);
+    console.log("   Name:     ".grey+video.name);
     console.log("");
 }
 
 function showIntro() {
-    console.log("Video Library\n");
+    console.log("   Video Library\n");
 }
 
 function ask() {
-    interface.question(" → ".bold, (answer) => {
+    interface.question(" → ".bold.yellow, (answer) => {
         answer = answer.trim();
         switch (answer) {
             case 'exit':
@@ -46,7 +46,7 @@ function ask() {
             default:
                 let q = query.parseQuery(answer);
                 let videos = query.queryVideos(q);
-                
+
                 console.log("");
                 videos.forEach((video) => {
                     showVideo(video);

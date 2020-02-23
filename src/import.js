@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { dbConnect, dbClose } from './db';
+import { dbConnect, dbClose } from './lib/db';
 
 dbConnect();
 
